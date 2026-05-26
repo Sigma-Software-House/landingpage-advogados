@@ -1,0 +1,76 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Plus+Jakarta+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+:root {
+  /* Premium Light Theme (Cream, Navy, Gold) */
+  --bg-primary: #fcfbf9;
+  --bg-secondary: #ffffff;
+  --color-primary: #0a1128;
+  --color-secondary: #1c2541;
+  --color-accent: #b89c72;
+  --color-accent-hover: #9c8057;
+  --color-accent-light: #f4efe6;
+  --text-main: #2b2d42;
+  --text-muted: #5c627a;
+  --border-color: #ede8df;
+  --shadow-sm: 0 2px 4px rgba(10, 17, 40, 0.04);
+  --shadow-md: 0 10px 30px rgba(10, 17, 40, 0.06);
+  --shadow-lg: 0 20px 40px rgba(10, 17, 40, 0.08);
+  
+  --font-serif: 'Playfair Display', Georgia, serif;
+  --font-sans: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  
+  font-family: var(--font-sans);
+  font-size: 16px;
+  line-height: 1.6;
+  color: var(--text-main);
+  background-color: var(--bg-primary);
+  color-scheme: light dark;
+  
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    /* Premium Dark Theme */
+    --bg-primary: #060913;
+    --bg-secondary: #0c1224;
+    --color-primary: #fcfbf9;
+    --color-secondary: #e2e8f0;
+    --color-accent: #dfc39a;
+    --color-accent-hover: #cfae81;
+    --color-accent-light: #1b2234;
+    --text-main: #e2e8f0;
+    --text-muted: #94a3b8;
+    --border-color: #1e293b;
+    --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.2);
+    --shadow-md: 0 10px 30px rgba(0, 0, 0, 0.3);
+    --shadow-lg: 0 20px 40px rgba(0, 0, 0, 0.4);
+  }
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--bg-primary);
+  color: var(--text-main);
+  overflow-x: hidden;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+#root {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Custom Selection style */
+::selection {
+  background-color: var(--color-accent-light);
+  color: var(--color-primary);
+}
